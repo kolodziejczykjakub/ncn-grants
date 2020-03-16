@@ -14,7 +14,6 @@ comp_name <- lapply(type_split, function(x) x[1])
 
 grants$comp <- unlist(comp_name)
 
-#TODO: split comp to a competition name and competition edition
 #grants$comp_edition <- lapply(comp_name, function(x) x[[1]][length(x[[1]])])
 #grants$comp_edition <- as.integer(grants$comp_edition)
 
@@ -22,7 +21,25 @@ grants$comp_date <- lapply(type_split, function(x) x[2])
 grants$comp_date <- as.Date(unlist(grants$comp_date),  origin = "1970-01-01")
 
 ####
+# TODO: split comp to a competition name and competition edition
 # TODO: subpanel -> code + name
-# TODO: convert budget
-# TODO: duration -> duration in months
-# TODO: parse coinvestigators
+
+# convert budget
+budgets_pln <- regmatches(gsub(" ", "", grants$budget), gregexpr('[0-9]+', gsub(" ", "", grants$budget)))
+budgets_pln <- unlist(budgets_pln)
+grants$budget_pln <- as.numeric(budgets_pln)
+
+# duration -> duration in months
+grants$duration
+
+duration_months <- regmatches(gsub(" ", "", grants$duration), gregexpr('[0-9]+', gsub(" ", "", grants$duration)))
+duration_months <- unlist(duration_months)
+grants$duration_months <- as.numeric(duration_months)
+
+# parse coinvestigators
+coinvestigators_count <- regmatches(gsub(" ", "", grants$coinvestigators),
+                                    gregexpr('[0-9]+', gsub(" ", "", grants$coinvestigators)))
+
+coinvestigators_count <- as.numeric(coinvestigators_count) 
+grants$coinvestigators_cnt <- coinvestigators_count
+
