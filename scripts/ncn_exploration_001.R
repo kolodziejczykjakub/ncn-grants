@@ -58,7 +58,6 @@ coinvestigators_count <- as.numeric(coinvestigators_count)
 grants$coinvestigators_cnt <- coinvestigators_count
 
 ### Preprocessing for grants data -- done!
-View(grants)
 
 # TODO: Investigate descriptors
 

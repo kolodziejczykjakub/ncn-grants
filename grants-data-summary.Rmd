@@ -1,0 +1,19 @@
+---
+title: "grants-data-summary"
+date: "March 18, 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("scripts/ncn_exploration_001.R")
+source("scripts/ncn_competition_description.R")
+```
+
+## Competition name with description
+
+```{r, echo=F}
+x <- grants_description$competitionDescription
+grants_description$competitionDescriptionCut <-ifelse(nchar(as.character(x)) > 20, paste(substr(x, 1, 20), "..."), x)
+knitr::kable(grants_description[,c(1, 3)])
+```
