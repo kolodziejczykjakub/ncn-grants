@@ -3,6 +3,16 @@
 
 grants <- read.csv("./data/grants_larger.csv")
 descriptors <- read.csv("./data/descriptors.csv")
+grants_2019 <- read.csv("./data/ncn_2019.csv")
+ncn_fiil <- read.csv("./data/ncn_fill.csv")
+
+# Concat of 2019 data
+grants_2019$type <- grants_2019$grant_type
+grants_2019 <- grants_2019[, colnames(grants)]
+grants <- rbind(grants, grants_2019)
+
+# Join additional data from ncn fill
+grants <- merge(grants, ncn_fiil, by = "id")
 
 # 2 informations from type column: name & date
 x <- strsplit(as.character(grants$type), " ") 
@@ -57,10 +67,30 @@ coinvestigators_count <- regmatches(gsub(" ", "", grants$coinvestigators),
 coinvestigators_count <- as.numeric(coinvestigators_count) 
 grants$coinvestigators_cnt <- coinvestigators_count
 
+grants$subpanel_code_type <- as.character(lapply(grants$subpanel_code,
+                                                 function(x) substr(x, 1, 2)))
+grants$subpanel_code_number <- as.numeric(lapply(grants$subpanel_code,
+                                                   function(x) substr(x, 3, 3)))
+
 ### Preprocessing for grants data -- done!
 
 # TODO: Investigate descriptors
 
+grants <- grants[, c("id",
+                     "title",
+                     "institution",
+                     "project_status",
+                     "comp_date",
+                     "comp_name",
+                     "comp_edition",
+                     "subpanel_code_type",
+                     "subpanel_code_number",
+                     "subpanel_description",
+                     "budget_pln",
+                     "duration_months",
+                     "coinvestigators_cnt")]
+
 write.csv(grants,
           file = "./data/grants_preprocessed.csv",
           row.names = FALSE)
+View(grants)
