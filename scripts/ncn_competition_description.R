@@ -36,3 +36,7 @@ BEETHOVEN LIFE– konkurs na polsko-niemieckie projekty badawcze z zakresu nauk 
 
 grants_description <- data.frame("competitionName" = grants_name,
                                  "competitionDescription" = description)
+
+write.csv(grants_description,
+          file = "./data/grants_description.csv",
+          row.names = FALSE)

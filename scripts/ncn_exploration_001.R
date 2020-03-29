@@ -61,4 +61,6 @@ grants$coinvestigators_cnt <- coinvestigators_count
 
 # TODO: Investigate descriptors
 
-
+write.csv(grants,
+          file = "./data/grants_preprocessed.csv",
+          row.names = FALSE)
