@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,58 +18,282 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="main/static/bootstrap-4.4.1/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="static/main/chartjs-2.9.3/dist/Chart.js"></script>
 </head>
 
 <body>
-    <div class="container my-3 px-3 py-2">
+    <div class="container my-3 px-3 py-3" style="max-width: 1400px; width:1440px">
         <div class="row p-2">
             <div class="col-12">
-                <h1 class="text-center" style="letter-spacing: 2px;">Tytuł</h1>
+                <h1 class="text-center" style="letter-spacing: 2px;">
+                    <img src="{% static 'main/assets/logo.png' %}" />
+                </h1>
             </div>
         </div>
         <div class="row p-2">
-            <div class="col-sm-6">Opis NCN, jakieś wprowadzenie</div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-6">ikonka z jakimś wykresem lub coś podobnego</div>
-                    <div class="col-sm-6">
-                        <div class="row" style="height:33%">
-                            <div class="col-12">statystyka 1</div>
+            <div class="col text-justify" style="font-size: 11.5pt; padding: 30px; line-height: 1.5rem;">
+                <h4>Kim jest Narodowe Centrum Nauki</h4>
+                <br />
+
+                <p>
+                    <b>Narodowe Centrum Nauki</b> jest agencją wykonawczą powołaną do wspierania działalności naukowej w
+                    zakresie
+                    badań podstawowych, czyli prac empirycznych lub teoretycznych mających przede wszystkim na celu
+                    zdobywanie nowej wiedzy o podstawach zjawisk i obserwowalnych faktów bez nastawienia na bezpośrednie
+                    zastosowanie komercyjne.
+                </p>
+                <p>
+                    <b>Zadania NCN</b>
+                    <ol>
+                        <li>
+                            finansowanie badań podstawowych realizowanych w formie
+                            <ul>
+                                <li>projektów badawczych, w tym finansowanie zakupu lub wytworzenia aparatury
+                                    naukowo-badawczej niezbędnej do realizacji tych projektów,</li>
+                                <li>
+                                    niepodlegających współfinansowaniu z zagranicznych środków finansowych projektów
+                                    badawczych realizowanych w ramach programów lub inicjatyw międzynarodowych
+                                    ogłaszanych we współpracy dwu- lub wielostronnej albo projektów badawczych
+                                    realizowanych przy wykorzystaniu przez polskie zespoły badawcze wielkich
+                                    międzynarodowych urządzeń badawczych,
+                                </li>
+                                <li>
+                                    projektów badawczych realizowanych przez młodych naukowców w rozumieniu art. 360
+                                    ust. 2 ustawy z dnia 20 lipca 2018 r. – Prawo o szkolnictwie wyższym i nauce, w tym
+                                    mających na celu stworzenie unikatowego warsztatu naukowego lub powołanie nowego
+                                    zespołu naukowego,
+
+                                </li>
+                                <li>
+                                    stypendiów doktorskich i staży po uzyskaniu stopnia naukowego doktora,
+
+                                </li>
+                                <li>
+                                    projektów badawczych dla doświadczonych naukowców mających na celu realizację
+                                    pionierskich badań naukowych, w tym interdyscyplinarnych, ważnych dla rozwoju nauki,
+                                    wykraczających poza dotychczasowy stan wiedzy, i których efektem mogą być odkrycia
+                                    naukowe;
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            finansowanie badań naukowych innych niż wymienione w pkt 1, nienależących do zakresu badań
+                            finansowanych
+                        </li>
+                        <li>
+                            finansowanie badań podstawowych
+                            przez Narodowe Centrum Badań i Rozwoju;
+                        </li>
+                        <li>
+                            nadzór nad realizacją badań naukowych;
+                        </li>
+                        <li>
+                            współpraca międzynarodowa w ramach finansowania działalności w zakresie badań podstawowych;
+                        </li>
+                        <li>
+                            upowszechnianie w środowisku naukowym informacji o ogłaszanych przez Centrum konkursach;
+                        </li>
+                        <li>
+                            inspirowanie i monitorowanie finansowania badań podstawowych ze środków pochodzących spoza
+                            budżetu
+                            państwa;
+                        </li>
+                        <li>
+                            wykonywanie innych zadań zleconych przez Ministra, ważnych dla rozwoju badań podstawowych, w
+                            tym
+                            opracowywanie programów badawczych ważnych dla kultury narodowej, przy zapewnieniu środków
+                            finansowych
+                            na realizację tych zadań;
+                        </li>
+                        <li>
+                            finansowanie nagrody Narodowego Centrum Nauki przyznawanej zgodnie z regulaminem określonym
+                            przez Radę i
+                            zatwierdzonym przez Ministra.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="row" style="padding-top: 30px;">
+                    <div class="col-12"
+                        style="height: 100%; font-size: 12pt; border-top: 8px solid rgb(245, 251, 255);background: rgb(245, 251, 255); ">
+                        <div style="text-align: center;">
+                            <img style="display: inline-block; width: 60%; margin:10px"
+                                src="https://icon-library.net/images/statistics-icon/statistics-icon-14.jpg" />
                         </div>
-                        <div class="row" style="height:34%">
-                            <div class="col-12">statystyka 2</div>
+                        <div class="my-3 p-3" style="background: #fff;"><span class="statistic">25</span>
+                            edycji
+                            zrealizowanych do tej
+                            pory
+                            przez NCN
                         </div>
-                        <div class="row" style="height:33%">
-                            <div class="col-12">statystyka 3</div>
-                        </div>
+                        <div class="my-3 p-3" style="background: #fff;"><span class="statistic">12000</span>
+                            przyjętych i
+                            sfinansowanych
+                            wniosków</div>
+                        <div class="my-3 p-3" style="background: #fff;"><span class="statistic">2 mld.</span>
+                            łącznie
+                            przyznanych złotych na
+                            granty </div>
+                        <div class="my-3 p-3" style="background: #fff;"><span class="statistic">27</span>
+                            subpaneli, w
+                            których przyznawane są
+                            granty </div>
                     </div>
                 </div>
             </div>
         </div>
+        <h3>Czego dotyczą konkursy?</h3>
+        <div class="row p-4">
+            <div class="col-4" style="font-size: 13pt;">
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #0A4E75; color: #fff;">Nauki humanistyczne, społeczne i
+                        o
+                        sztuce - są to...</div>
+                </div>
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #CEDBE4;">Nauki o ziemi - są to...</div>
+                </div>
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #E5E5E5;">Nauki ścisłe i techniczne - są to...</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="text-center mb-3" style="font-size: 15pt;">% wszystkich wniosków w każdym panelu</div>
+                <div style="position: relative; max-width: 80%; max-height: 100%; margin: auto;">
+                    <canvas id="myChart4"></canvas>
+                </div>
+                <script> Chart.pluginService.register({ beforeDraw: function (chart) { var width = chart.chart.width, height = chart.chart.height, ctx = chart.chart.ctx; ctx.restore(); var fontSize = (height / 150).toFixed(2); ctx.font = fontSize + "em sans-serif"; ctx.textBaseline = "middle"; var text = chart.config.options.elements.center.text, textX = Math.round((width - 0.9 * ctx.measureText(text).width) / 2), textY = 0.85 * height; ctx.fillStyle = '#636363'; ctx.fillText(text, textX, textY); ctx.save(); } }); var data = { labels: ['HS', "NZ", "ST"], datasets: [{ data: [23.652, 23.928, 28.579], backgroundColor: ['#0a4f75', '#CEDBE3'], hoverBackgroundColor: ['#0a4f75', '#CEDBE3'], borderColor: ['#f2f2f2', '#f2f2f2'], borderWidth: [2] }] }; var ctx = document.getElementById("myChart4").getContext("2d"); var myDoughnutChart = new Chart(ctx, { type: 'doughnut', data: data, options: { plugins: { deferred: { xOffset: '50%', yOffset: '50%', delay: 500 } }, elements: { center: { text: "31.1/31.4/37.5" } }, legend: { display: true }, rotation: 1 * Math.PI, circumference: 1 * Math.PI, tooltips: { enabled: false }, hover: { mode: null }, }, }); </script>
+            </div>
+        </div>
         <div class="row p-2">
             <div class="col-12">
-                <table class="table">
+                <h4>Konkursy realizowane przez NCN w 2020 roku</h4><br />
+                <table class="table text-justify">
                     <thead>
                         <tr class="table-primary">
-                            <th>Nazwa konkursu</th>
-                            <th>Opis konkursu</th>
+                            <th width="20%">Rodzaj konkursu</th>
+                            <th width="80%">Opis konkursu</th>
                         </tr>
                         <tr>
-                            <td>OPUS</td>
-                            <td>opis OPUSU</td>
+                            <td>CEUS-UNISONO</td>
+                            <td>Konkurs na projekty dwu- i trójstronne realizowane w ramach współpracy z partnerami z
+                                Austrii, Czech i Słowenii, których ocena merytoryczna przeprowadzana jest przez
+                                zagraniczne agencje finansujące badania (Lead Agency Procedure)</td>
                         </tr>
                         <tr>
-                            <td>SONATA</td>
-                            <td>opis SONATY</td>
+                            <td>OPUS 19</td>
+                            <td>Konkurs na projekty badawcze otwarty dla wszystkich naukowców</td>
+                        </tr>
+                        <tr>
+                            <td>PRELUDIUM 19</td>
+                            <td>Konkurs na projekty badawcze realizowane przez osoby, które nie posiadają stopnia
+                                naukowego doktora</td>
+                        </tr>
+                        <tr>
+                            <td>POLS</td>
+                            <td>Konkurs w ramach tzw. funduszy EOG i funduszy norweskich</td>
+                        </tr>
+                        <tr>
+                            <td>SONATA BIS 10</td>
+                            <td>Konkurs na projekty badawcze mające na celu powołanie nowego zespołu naukowego
+                                realizowane przez osoby posiadające stopień lub tytuł naukowy, które uzyskały stopień
+                                naukowy doktora w okresie od 5 do 12 lat przed rokiem wystąpienia z wnioskiem</td>
+                        </tr>
+                        <tr>
+                            <td>MAESTRO 12</td>
+                            <td>Konkurs na projekty badawcze prowadzone przez doświadczonych naukowców, mające na celu
+                                realizację pionierskich badań naukowych, w tym interdyscyplinarnych, ważnych dla rozwoju
+                                nauki, wykraczających poza dotychczasowy stan wiedzy, których efektem mogą być odkrycia
+                                naukowe</td>
+                        </tr>
+                        <tr>
+                            <td>DAINA 2</td>
+                            <td>Konkurs na polsko-litewskie projekty badawcze</td>
+                        </tr>
+                        <tr>
+                            <td>OPUS 20 + LAP</td>
+                            <td>Konkurs na projekty badawcze otwarty dla wszystkich naukowców, w tym na dwu- i
+                                trójstronne projekty realizowane z partnerami z Austrii, Czech i Słowenii, a także
+                                dwustronne projekty z partnerami z Niemiec (ST i NZ) i Szwajcarii współfinansowane przez
+                                agencje zagraniczne w oparciu o wyniki oceny przeprowadzanej przez NCN (Lead Agency
+                                Procedure).</td>
+                        </tr>
+                        <tr>
+                            <td>PRELUDIUM BIS 2</td>
+                            <td>Konkurs na projekty badawcze realizowane przez doktorantów w szkołach doktorskich</td>
+                        </tr>
+                        <tr>
+                            <td>SONATA 16</td>
+                            <td>Konkurs na projekty badawcze realizowane przez osoby posiadające stopień naukowy doktora
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BEETHOVEN CLASSIC 4</td>
+                            <td>Konkurs na polsko-niemiecki projekty badawcze w naukach humanistycznych, społecznych i o
+                                sztuce </td>
+                        </tr>
+                        <tr>
+                            <td>SONATINA 5</td>
+                            <td>Konkurs na projekty badawcze realizowane przez osoby będące do 3 lat po uzyskaniu
+                                stopnia naukowego doktora</td>
+                        </tr>
+                        <tr>
+                            <td>SHENG 2</td>
+                            <td>Konkurs na polsko-chińskie projekty badawcze w panelach: ST4, ST5, ST8, NZ1–NZ9, HS6
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DIOSCURI 4</td>
+                            <td>Konkurs na utworzenie centrów doskonałości naukowej</td>
+                        </tr>
+                        <tr>
+                            <td>MINIATURA 4*</td>
+                            <td>Konkurs na działania naukowe służące realizacji badań podstawowych.</td>
                         </tr>
                     </thead>
                 </table>
             </div>
         </div>
+
+        <div class="row px-2 py-0">
+            <div class="col-6">
+                <h4>Jeśli zastanawiasz się...</h4>
+                <p class="text-justify">
+                    ...w którym konkursie powinieneś wziąć udział, <b>spójrz na poniższy wykres</b>. Znajdziesz na nim
+                    informacje o tym, które z uruchomionych do tej pory przez nas konkursów dają szansę na największe
+                    dofinansowanie. Jeśli planujesz realizować duży projekt, wymagający dużych nakładów finansowych,
+                    powinieneś wybrać któryś z poniżej wymienionych tj. <b>OPUS, SONATA lub SONATA BIS</b>. W tych
+                    konkursach historycznie udzielany były największej wysokości granty. W przeciwnym wypadku możesz
+                    spróbować swoich szans w pozostałych konkursach.
+                </p>
+            </div>
+            <div class="col-6">
+                <h4>Czy wiesz?</h4>
+                <p class="text-justify">
+                    Czy wiesz jaką kwotę otrzymali już łącznie wnioskodawcy z każdego panelu w latach naszej
+                    działalności?
+                    <ul>
+                        <li><b>Nauki ścisłe </b>, to panel, który otrzymuje najwyższe granty. W roku 2018
+                            sfinansowaliśmy projekty o łącznej wartości przekraczającej 450 milionów złotych.</li>
+                        <li>Niewiele mniej otrzymali od nas wnioskodawcy z panelu <b>NZ - nauki o życiu</b>. </li>
+                        <li>Osoby zajmujące się <b>naukami humanistycznymi, społecznymi i o sztuce</b>, są grupą, która
+                            ze względu na specyfikę projektów wymagała najmniejszych nakładów.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
         <div class="row p-2">
-            <div class="col-sm-6">Wykres słupkowy horyzontalny, 5 najwięcej konkursów, w które włożono najwięcej kasy
-                sumarycznie + inne</div>
-            <div class="col-sm-6">wykres słupkowy (liczba przyjetych wniosków): line plot x3 (NZ, human, scisle)</div>
+            <div class="col-6">
+                <img width="100%" src="{% static 'main/assets/plots/horizontalbarchart-konkursy.png' %}" />
+            </div>
+            <div class="col-6">
+                <!-- wykres słupkowy (liczba przyjetych wniosków): line plot x3 (NZ, human, scisle) -->
+                <img width="100%" src="{% static 'main/assets/plots/lineplot.png' %}" />
+            </div>
         </div>
         <div class="row p-2">
             <div class="col-12">
@@ -76,68 +302,151 @@
         </div>
         <div class="row p-2">
             <div class="col-12">
-                Wykresy kołowe ratio wnioski przyjęte/odrzucone per konkurs lub wykres horizontal stacked bar.
-            </div>
-        </div>
-        <div class="row p-2">
-            <div class="col-12">Oś ze średnią przyznawaną kwotą. Flagi konkursów</div>
-        </div>
-        <div class="row p-2">
-            <div class="col-12">Heatmapa (do przemyślenia)</div>
-        </div>
-        <div class="row p-2">
-            <div class="col-12">Wykresy słupkowe konkursy x % przyjetych wniosków per jednostka naukowa</div>
-        </div>
-        <div class="row p-2">
-            <div class="col-12">
-                <h3 class="text-center">Aspekty formalne</h3>
-            </div>
-        </div>
-        <div class="row p-2">
-            <div class="col-3 p-1">
-                <div class="card bg-light">
-                    <div class="card-header">Krok 1</div>
-                    <div class="card-body">
-                        <p class="card-text">Co zrobić</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 p-1">
-                <div class="card bg-light">
-                    <div class="card-header">Krok 2</div>
-                    <div class="card-body">
-                        <p class="card-text">Co zrobić</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 p-1">
-                <div class="card bg-ligh">
-                    <div class="card-header">Krok 3</div>
-                    <div class="card-body">
-                        <p class="card-text">Co zrobić</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 p-1">
-                <div class="card bg-light">
-                    <div class="card-header">Krok 4</div>
-                    <div class="card-body">
-                        <p class="card-text">Co zrobić</p>
-                    </div>
-                </div>
+                <p>
+                    <b>Zrób wstępną kalkulację</b> swoich potrzeb finansowych i dopasuj konkurs pod względem kwoty,
+                    która jest Ci potrzebna do realizacji projektu.
+                </p>
             </div>
         </div>
         <div class="row p-2">
             <div class="col-12">
-                Linki
+                <p>
+                    Zastanawiasz się jakie masz szansę otrzymania grantu? Poniżej znajdziesz informacje o tym jaki
+                    procent
+                    wniosków zostało przyjętych w konkursach: DAINA, SONATINA, SOATA BIS, PRELUDIUM, OPUS, SONATA,
+                    MAESTRO,
+                    BEETHOVEN CLASSIC, SHENG. Pozwoli Ci to oszacować swoje szanse, ale <b>pamiętaj</b>, że nawet jeśli
+                    uważasz, że szanse są nikłe, to warto złożyć wniosek.
+                </p>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-12">
+                <!-- Oś ze średnią przyznawaną kwotą. Flagi konkursów -->
+                <img width="100%" src="{% static 'main/assets/plots/test.png' %}" />
+                <hr />
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-9">
+                <!-- Wykresy słupkowe konkursy x % przyjetych wniosków per jednostka naukowa -->
+                <img width="100%" src="{% static 'main/assets/plots/horizontalbarchart-podzial-konkursy.png' %}" />
+            </div>
+            <div class="col-3 pt-5">
+                opis wykresu słupkowego
+            </div>
+        </div>
+        <hr />
+        <div class="row p-2">
+            <div class="col-12">
+                <h3 class="text-center">Etapy oceny wniosku</h3>
+            </div>
+        </div>
+        <div class="row p-4">
+            <div class="col p-0 m-1">
+                <div class="text-justify formal-box">
+                    <span class="formal-figure">1</span>
+                    <b>Wnioskodawca</b> zobowiązany jest do:
+                    <ol style="padding-left: 12px; margin-top:5px">
+                        <li>dokonania rejestracji w systemie OSF</li>
+                        <li>wypełnienia odpowiedniego typu wniosku oraz przesłania go drogą elektroniczną</li>
+                        <li>wydrukowania wersji elektronicznej dokumentu, opatrzenia jej wszystkimi niezbędnymi
+                            podpisami oraz
+                            przesłania wniosku drogą pocztową lub osobiście</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col p-0 m-1">
+                <div class="text-justify formal-box">
+                    <span class="formal-figure">2</span>
+                    <b>Wnioski</b> oceniane są w pierwszej kolejności pod kątem spełniania warunków formalnych, a
+                    następnie
+                    oceniana jest ich zawartość merytoryczna zgodnie z przewidzianym w niniejszym regulaminie trybem i
+                    zasadami.
+                    Ocena formalna wniosków obejmuje:
+                    <ol style="padding-left: 12px; margin-top:5px">
+                        <li>ocenę kompletności wniosków</li>
+                        <li>ocenę czy dany wniosek spełnia wszystkie wymagania przedstawione w ogłoszeniu o konkursie
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col p-0 m-1">
+                <div class="text-justify formal-box">
+                    <span class="formal-figure">3</span>
+                    <b>Zespół Ekspertów</b> dokonuje indywidualnych ocen wniosków. Do kolejnego etapu kierowane są
+                    wnioski z
+                    najwyższych pozycji listy rankingowej, których łączna kwota planowanych nakładów nie powinna
+                    przekraczać dwukrotnej wysokości środków finansowych przeznaczonych przez Radę na realizację
+                    projektów w ramach danego panelu lub grup paneli w ramach komisji Rady.
+                </div>
+            </div>
+            <div class="col p-0 m-1">
+                <div class="text-justify formal-box">
+                    <span class="formal-figure">4</span>
+                    <b>Dokonywana</b> na podstawie szczegółowego opisu projektu badawczego: członkowie Zespołu Ekspertów
+                    ustalają końcową ocenę wniosku na podstawie opinii specjalistycznych, sporządzanych przez ekspertów
+                    niebędących członkami Zespołu Ekspertów oceniającego wniosek w poprzednim etapie oraz analizy i
+                    dyskusji wniosków podczas posiedzenia. W przypadku części konkursów odbywa się również rozmowa
+                    kwalifikacyjna
+                </div>
+            </div>
+            <div class="col p-0 m-1">
+                <div class="text-justify formal-box">
+                    <span class="formal-figure">5</span>
+                    <b>Zespół Ekspertów</b> ustala listę rankingową wniosków rekomendowanych do finansowania, którą
+                    przedstawia
+                    Dyrektorowi Narodowego Centrum Nauki do zatwierdzenia listę rankingową. W szczególnie uzasadnionych
+                    przypadkach, Dyrektor Narodowego Centrum Nauki może przedłużyć czas realizacji projektu badawczego.
+                </div>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-12">
+                <hr />
+                <b>INFORMACJA TELEFONICZNA UDZIELANA JEST W GODZINACH 8:30 – 12:30</b>
+                <ul>
+                    <li class=""><strong>dla wnioskodawców</strong>: tel. 12 341 90 00, <a
+                            href="mailto:informacja@ncn.gov.pl" class="mailto">informacja@ncn.gov.pl<span class="mailto"
+                                aria-label="(link sends e-mail)"></span></a></li>
+                    <li class=""><strong>informacje dotyczące wniosków będących w procesie oceny</strong>: Dział Obsługi
+                        Wniosków (prosimy o kontakt z opiekunem projektu wskazanym w <a
+                            href="https://osf.opi.org.pl/app/adm/start.do" class="ext" target="_blank"
+                            rel=" noopener noreferrer">systemie OSF<span class="ext"
+                                aria-label="(link is external)"></span></a>)</li>
+                    <li class=""><strong>dla realizujących projekty</strong>,&nbsp;obsługa projektów, staży i
+                        stypendiów: Dział Badań Naukowych i Rozwoju Naukowców<ul>
+                            <li class="">konkursy krajowe i międzynarodowe realizowane we współpracy bilateralnej - <a
+                                    href="/kontakt/wyszukaj-opiekuna-projektu">wyszukaj opiekuna projektu</a></li>
+                            <li class="">konkursy międzynarodowe realizowane we współpracy wielostronnej - prosimy o
+                                kontakt z opiekunem wskazanym w <a href="http://osf.opi.org.pl/" class="ext"
+                                    target="_blank" rel=" noopener noreferrer">systemie OSF<span class="ext"
+                                        aria-label="(link is external)"></span></a>)</li>
+                        </ul>
+                    </li>
+                    <li class=""><strong>raporty końcowe i rozliczanie projektów, staży i stypendiów</strong>: Dział
+                        Rozliczania Projektów Badawczych, Staży i Stypendiów (prosimy o kontakt z opiekunem projektu
+                        wskazanym w <a href="https://osf.opi.org.pl/app/adm/start.do" class="ext" target="_blank"
+                            rel=" noopener noreferrer">systemie OSF<span class="ext"
+                                aria-label="(link is external)"></span></a>)</li>
+                </ul>
             </div>
         </div>
         <div class="row p-2">
             <div class="col-12">
                 <h3 class="text-center">Harmonogram</h3>
             </div>
+            <div class="col-12 text-justify">
+                <p style="font-size: 13pt;">
+                    <b>Nie przegap rejestracji!</b> Poniżej możesz zobaczyć terminy otwarcia (oznaczone kolorem
+                    niebieskim) i zamknięcia okienka
+                    rejestracyjnego (oznaczone kolorem czerwonym) na tegoroczne konkursy. Nie zwlekaj, tylko złóż
+                    wniosek, a my rozpatrzymy go w
+                    najszybszym możliwym terminie. Powodzenia!
+                </p>
+            </div>
             <div class="col-12">
-                Oś z terminami rozpoczęcia i zakończenia konkursów.
+                <img width="100%" src="{% static 'main/assets/plots/time.png' %}" />
             </div>
         </div>
     </div>
