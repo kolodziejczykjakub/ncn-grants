@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row p-2">
-            <div class="col text-justify" style="font-size: 11.5pt; padding: 30px; line-height: 1.4rem;">
+            <div class="col text-justify" style="font-size: 11.5pt; padding: 30px; line-height: 1.5rem;">
                 <h4>Kim jest Narodowe Centrum Nauki</h4>
                 <br />
 
@@ -145,6 +145,29 @@
                 </div>
             </div>
         </div>
+        <h3>Czego dotyczą konkursy?</h3>
+        <div class="row p-4">
+            <div class="col-4" style="font-size: 13pt;">
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #0A4E75; color: #fff;">Nauki humanistyczne, społeczne i
+                        o
+                        sztuce - są to...</div>
+                </div>
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #CEDBE4;">Nauki o ziemi - są to...</div>
+                </div>
+                <div class="row" style="height: 33.33%;">
+                    <div class="col-12 py-2" style="background: #E5E5E5;">Nauki ścisłe i techniczne - są to...</div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="text-center mb-3" style="font-size: 15pt;">% wszystkich wniosków w każdym panelu</div>
+                <div style="position: relative; max-width: 80%; max-height: 100%; margin: auto;">
+                    <canvas id="myChart4"></canvas>
+                </div>
+                <script> Chart.pluginService.register({ beforeDraw: function (chart) { var width = chart.chart.width, height = chart.chart.height, ctx = chart.chart.ctx; ctx.restore(); var fontSize = (height / 150).toFixed(2); ctx.font = fontSize + "em sans-serif"; ctx.textBaseline = "middle"; var text = chart.config.options.elements.center.text, textX = Math.round((width - 0.9 * ctx.measureText(text).width) / 2), textY = 0.85 * height; ctx.fillStyle = '#636363'; ctx.fillText(text, textX, textY); ctx.save(); } }); var data = { labels: ['HS', "NZ", "ST"], datasets: [{ data: [23.652, 23.928, 28.579], backgroundColor: ['#0a4f75', '#CEDBE3'], hoverBackgroundColor: ['#0a4f75', '#CEDBE3'], borderColor: ['#f2f2f2', '#f2f2f2'], borderWidth: [2] }] }; var ctx = document.getElementById("myChart4").getContext("2d"); var myDoughnutChart = new Chart(ctx, { type: 'doughnut', data: data, options: { plugins: { deferred: { xOffset: '50%', yOffset: '50%', delay: 500 } }, elements: { center: { text: "31.1/31.4/37.5" } }, legend: { display: true }, rotation: 1 * Math.PI, circumference: 1 * Math.PI, tooltips: { enabled: false }, hover: { mode: null }, }, }); </script>
+            </div>
+        </div>
         <div class="row p-2">
             <div class="col-12">
                 <h4>Konkursy realizowane przez NCN w 2020 roku</h4><br />
@@ -234,6 +257,7 @@
                 </table>
             </div>
         </div>
+
         <div class="row px-2 py-0">
             <div class="col-6">
                 <h4>Jeśli zastanawiasz się...</h4>
@@ -261,6 +285,7 @@
                 </p>
             </div>
         </div>
+
         <div class="row p-2">
             <div class="col-6">
                 <img width="100%" src="{% static 'main/assets/plots/horizontalbarchart-konkursy.png' %}" />
@@ -312,28 +337,6 @@
             </div>
         </div>
         <hr />
-        <div class="row p-4">
-            <div class="col-4" style="font-size: 13pt;">
-                <div class="row" style="height: 33.33%;">
-                    <div class="col-12 py-2" style="background: #0A4E75; color: #fff;">Nauki humanistyczne, społeczne i
-                        o
-                        sztuce - są to...</div>
-                </div>
-                <div class="row" style="height: 33.33%;">
-                    <div class="col-12 py-2" style="background: #CEDBE4;">Nauki o ziemi - są to...</div>
-                </div>
-                <div class="row" style="height: 33.33%;">
-                    <div class="col-12 py-2" style="background: #E5E5E5;">Nauki ścisłe i techniczne - są to...</div>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="text-center mb-3" style="font-size: 17pt;">% przyjętych wniosków w każdym panelu</div>
-                <div style="position: relative; max-width: 80%; max-height: 100%; margin: auto;">
-                    <canvas id="myChart4"></canvas>
-                </div>
-                <script> Chart.pluginService.register({ beforeDraw: function (chart) { var width = chart.chart.width, height = chart.chart.height, ctx = chart.chart.ctx; ctx.restore(); var fontSize = (height / 150).toFixed(2); ctx.font = fontSize + "em sans-serif"; ctx.textBaseline = "middle"; var text = chart.config.options.elements.center.text, textX = Math.round((width - 0.9 * ctx.measureText(text).width) / 2), textY = 0.85 * height; ctx.fillStyle = '#636363'; ctx.fillText(text, textX, textY); ctx.save(); } }); var data = { labels: ['HS', "NZ", "ST"], datasets: [{ data: [18.8, 20.5, 22.5], backgroundColor: ['#0a4f75', '#CEDBE3'], hoverBackgroundColor: ['#0a4f75', '#CEDBE3'], borderColor: ['#f2f2f2', '#f2f2f2'], borderWidth: [2] }] }; var ctx = document.getElementById("myChart4").getContext("2d"); var myDoughnutChart = new Chart(ctx, { type: 'doughnut', data: data, options: { plugins: { deferred: { xOffset: '50%', yOffset: '50%', delay: 500 } }, elements: { center: { text: "18.8/20.5/22.5" } }, legend: { display: true }, rotation: 1 * Math.PI, circumference: 1 * Math.PI, tooltips: { enabled: false }, hover: { mode: null }, }, }); </script>
-            </div>
-        </div>
         <div class="row p-2">
             <div class="col-12">
                 <h3 class="text-center">Etapy oceny wniosku</h3>
