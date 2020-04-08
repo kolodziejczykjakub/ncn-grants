@@ -16,7 +16,7 @@
 Projekt zawiera infografikę, zawierającą informacje o podstawowej działalności Narodowego Centrum Nauki, realizowanych przez nie konkursów oraz statystyk związanych między innymi z liczbą edycji, wielkości grantów czy liczbą wniosków. Zaprezentowana jest ona w formie ulotki przeprowadzającej wnioskodawcę przez cały etap składania wniosku - od podstawowych informacji na temat NCN, przez dane historyczne w postaci wykresów i tabel, na aspektach formalnych kończąc.
 </div>
 <br />
-<img width="100%" height="300" src="NCN Grants.png" style="object-fit:cover; object-position:0 0" />
+<img width="100%" src="NCN Grants_part.png" />
 
 Infografika dostępna jest w formatach:
 1. PNG - NCN Grants.png
